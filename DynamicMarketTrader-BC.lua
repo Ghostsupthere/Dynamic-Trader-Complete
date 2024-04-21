@@ -1,5 +1,5 @@
 --[[
-DynamicMarketTrader
+DynamicMarketTrader-BC
     This script was originally developed by Dinkledork, all credit goes to him.
     Please support Dinkledork's work by visiting his Patreon page: https://www.patreon.com/Dinklepack5
 
