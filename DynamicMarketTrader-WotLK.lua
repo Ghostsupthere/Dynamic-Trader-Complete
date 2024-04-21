@@ -126,7 +126,7 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_fabric_frostweave_imbuedbolt:36:36:-42|tBolt of Imbued Frostweave", id = 41511, price = 48500 },
         { name = "|TInterface\\Icons\\inv_fabric_ebonweave:36:36:-42|tEbonweave", id = 41593, price = 80000 },
         { name = "|TInterface\\Icons\\inv_fabric_moonshroud:36:36:-42|tMoonshroud", id = 56001, price = 150000 },
-        { name = "|TInterface\\Icons\\inv_fabric_spellweave:36:36:-42|tSpellweave", id = 56003, price = 150000 },,
+        { name = "|TInterface\\Icons\\inv_fabric_spellweave:36:36:-42|tSpellweave", id = 56003, price = 150000 },
     }},
     { name = "|TInterface\\Icons\\inv_misc_leatherscrap_15:40:40:-42|t|cffFFFF00Skinning - Basic|r", intid = 300, items = { -- P
         { name = "|TInterface\\Icons\\inv_misc_leatherscrap_15:36:36:-42|tBorean Leather", id = 33568, price = 90000 },
