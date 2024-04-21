@@ -1,9 +1,16 @@
 --[[
 DynamicMarketTrader
-    This script was developed by Dinkledork and will be updated periodically. 
-    It has been updated for BC items by EscapeMyCoom and is still a WIP.
+    This script was originally developed by Dinkledork, all credit goes to him.
+    Please support Dinkledork's work by visiting his Patreon page: https://www.patreon.com/Dinklepack5
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+    I (EscapeMyCoom) have edited this file to include Burning Crusade items for crafting
+    Not every tradeskill item is included as this is meant to provide a basis but still require other tradeskills to make certain items
+    Some items may be missing as this is a WIP by me
+    I have left two of the categories as placeholders incase you wish to add potions or enchanted vellums or anything else
 	
-    Please support Dinkledork's work by visiting my Patreon page: https://www.patreon.com/Dinklepack5
+-----------------------------------------------------------------------------------------------------------------------------------------------
 	
 	This script was created for smaller private servers as a means to allow players some semblance of an auctionhouse. In its current iteration, the ah module for Acore leaves a lot to be desired.
 	Prices are loosely based on authentic Burning Crusade prices as this is for Individual Progression servers or servers that mimic Burning Crusade via the 3.3.5 client.
