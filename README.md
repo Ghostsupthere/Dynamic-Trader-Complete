@@ -1,17 +1,17 @@
-# Dynamic-Trader
+# Dynamic-Trader-Complete
 The script uses a dynamic pricing system for items, with prices changing based on several factors, including the day of the week, the time of day, and a global fluctuation value. This means that prices will vary from month to month, day to day, hour to hour and has both buy and sell functions.
 Run the Sql in acore_world, place the script under lua_scripts and .npc add 180000-180002 wherever you like. You can set additional npcs for faction specific ones at the top of the script.
 
 ---------------------------------------------------------------------------------------------
--This fork includes Burning Crusade and Wrath of the Lich King Items
--They have been split up into separate NPCs and scripts so that they can be enabled \ disabled easily
--Prices are adjusted on a personal use, feel free to adjust as needed for your server
--All credit goes to DinkleDork for the original creator of this script, I merely finished the tedium of adding items
+	-This fork includes Burning Crusade and Wrath of the Lich King Items
+	-They have been split up into separate NPCs and scripts so that they can be enabled \ disabled easily and individually
+	-Prices are adjusted on a personal use, feel free to adjust as needed for your game
+	-All credit goes to DinkleDork for the original creation of this script, I merely finished the tedium of adding items
 
-NPC IDs:
--Vanilla Trader: 180000
--BC Trader: 180001
--WotLK Trader: 180002
+	NPC IDs:
+	-Vanilla Trader: 180000
+	-BC Trader: 180001
+	-WotLK Trader: 180002
 
 ---------------------------------------------------------------------------------------------
 
