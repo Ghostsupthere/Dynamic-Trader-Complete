@@ -178,7 +178,7 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_ingot_cobalt:36:36:-42|tCobalt Bar", id = 36916, price = 150000 }, 
         { name = "|TInterface\\Icons\\inv_ingot_yoggthorite:36:36:-42|tSaronite Bar", id = 36913, price = 200000 },
         { name = "|TInterface\\Icons\\inv_ingot_platinum:36:36:-42|tTitanium Bar", id = 41163, price = 300000 },
-        { name = "|TInterface\\Icons\\inv_ingot_titansteel_blue:36:36:-42|tTitansteel Bar", id = 37663, price = 750000 },
+        { name = "|TInterface\\Icons\\inv_ingot_titansteel_blue:36:36:-42|tTitansteel Bar", id = 37663, price = 7500000 },
     }},
     { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_04:40:40:-42|t|cff800080Gems|r", intid = 1200, items = { -- P
         { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_12:36:36:-42|tBloodstone", id = 36917, price = 350000 },
@@ -193,6 +193,7 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_04:36:36:-42|tScarlet Ruby", id = 36918, price = 350000 },
         { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_05:36:36:-42|tSky Sapphire", id = 36924, price = 350000 },
         { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_06:36:36:-42|tTwilight Opal", id = 36927, price = 350000 },
+        { name = "|TInterface\\Icons\\inv_misc_gem_pearl_09:36:36:-42|tNorthsea Pearl", id = 36783, price = 400000 },
         { name = "|TInterface\\Icons\\inv_jewelcrafting_icediamond_01:36:36:-42|tSkyflare Diamond", id = 41266, price = 500000 },
         { name = "|TInterface\\Icons\\inv_jewelcrafting_shadowspirit_01:36:36:-42|tEarthsiege Diamond", id = 41334, price = 500000 },
     }},
