@@ -1,13 +1,19 @@
 --[[
-DynamicMarketTrader
-    This script was developed by Dinkledork and will be updated perioidcally. 
+DynamicMarketTrader-Vanilla
+
+    This script was originally developed by Dinkledork, all credit goes to him.
+    Please support Dinkledork's work by visiting his Patreon page: https://www.patreon.com/Dinklepack5
+    This script is maintained by Ghostsupthere
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+    Not every tradeskill item is included as this is meant to provide a basis but still require other tradeskills to make certain items
+    Some items may be missing as this is a WIP by me, I am adding to it as I test
+    Prices are completely made up by me, for the economy I play with. You will likely want to adjust to your needs.
 	
-    Please support my work by visiting my Patreon page: https://www.patreon.com/Dinklepack5
+-----------------------------------------------------------------------------------------------------------------------------------------------
 	
 	This script was created for smaller private servers as a means to allow players some semblance of an auctionhouse. In its current interation, the ah module for Acore leaves a lot to be desired.
-	Prices are loosely based on authentic vanilla prices as this is for Individual Progression servers or servers that mimic vanilla via the 3.3.5 client. I will also be making scripts for TBC, Wrath, consumables, enchants, etc. 
-	As a means to not create an infinite source of easy gold, I've adjusted some prices for crafted materials to be lower than usual to make the margins tighter.
-	Please feel free to adjust any values you see fit.
+
 	
 	Features include:
 	The script uses a dynamic pricing system for items, with prices changing based on several factors, including the day of the week, the time of day, and a global fluctuation value. This means that prices will vary from month to month, day to day, hour to hour.

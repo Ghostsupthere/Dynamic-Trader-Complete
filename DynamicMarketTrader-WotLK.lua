@@ -1,14 +1,16 @@
 --[[
 DynamicMarketTrader-WotLK
+
     This script was originally developed by Dinkledork, all credit goes to him.
     Please support Dinkledork's work by visiting his Patreon page: https://www.patreon.com/Dinklepack5
     This script is maintained by Ghostsupthere
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
     Not every tradeskill item is included as this is meant to provide a basis but still require other tradeskills to make certain items
-    Some items may be missing as this is a WIP by me
+    Some items may be missing as this is a WIP by me, I am adding to it as I test
     I have left two of the categories as placeholders incase you wish to add potions or enchanted vellums or anything else
-	
+	Prices are completely made up by me, for the economy I play with. You will likely want to adjust to your needs.
+    
 -----------------------------------------------------------------------------------------------------------------------------------------------
 	
 	This script was created for smaller private servers as a means to allow players some semblance of an auctionhouse. In its current interation, the ah module for Acore leaves a lot to be desired.
