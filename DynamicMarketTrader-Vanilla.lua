@@ -95,8 +95,10 @@ local SELL_QUANTITY = 7
 local GLOBAL_FLUCTUATION = 0 -- Don't change
 
 
--- Think long and hard about changing price values. Do you really want players to buy 2 items for 50 copper to immediately turn around and make 3 gold via crafting it into another item over and over again?
--- Feel free to disable any item by commenting it out.
+
+-- Pricing will need adjusted based on your servers needs if you are forking this
+-- Please note that certain items are not included: Some may be oversight as this is a WIP, but certain items are not included on purpose
+-- If you wish to add them, just copy a line and use WoWhead for the iconID, itemID and then price accordingly to your needs
 
 local categories = {
   { name = "|TInterface\\Icons\\inv_misc_herb_frostlotus:40:40:-42|t|cff006400Herbs|r", intid = 100, items = {

@@ -99,7 +99,6 @@ local GLOBAL_FLUCTUATION = 0 -- Don't change
 -- Pricing will need adjusted based on your servers needs if you are forking this
 -- Please note that certain items are not included, some may be oversight as this is a WIP, but certain items such as epic gems are not included on purpose
 -- If you wish to add them, just copy a line and use WoWhead for the iconID, itemID and then price accordingly to your needs
--- Feel free to disable any item by commenting it out.
 
 local categories = {
   { name = "|TInterface\\Icons\\inv_misc_herb_goldclover:40:40:-42|t|cff006400Herbs|r", intid = 100, items = { 
