@@ -165,7 +165,7 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_fabric_purplefire_01:36:36:-42|tRunecloth", id = 14047, price = 8430 },
         { name = "|TInterface\\Icons\\inv_fabric_purplefire_02:36:36:-42|tBolt of Runecloth", id = 14048, price = 33720 },
         { name = "|TInterface\\Icons\\inv_fabric_felrag:36:36:-42|tFelcloth", id = 14256, price = 60600 },
-        { name = "|TInterface\\Icons\\inv_fabric_moonrag_01:36:36:-42|tMooncloth", id = 14342, price = 23000 },
+        { name = "|TInterface\\Icons\\inv_fabric_moonrag_01:36:36:-42|tMooncloth", id = 14342, price = 230000 },
     }},
     { name = "|TInterface\\Icons\\inv_misc_leatherscrap_07:40:40:-42|t|cffFFFF00Skinning - Basic|r", intid = 300, items = {
         { name = "|TInterface\\Icons\\inv_misc_pelt_bear_ruin_05:36:36:-42|tRuined Leather Scraps", id = 2934, price = 13 },
@@ -282,6 +282,10 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_enchant_shardbrilliantlarge:36:36:-42|tLarge Brilliant Shard", id = 14344, price = 100400 },
 		{ name = "|TInterface\\Icons\\inv_misc_gem_pearl_03:36:36:-42|tRighteous Orb", id = 12811, price = 241099 },
         { name = "|TInterface\\Icons\\inv_enchant_shardnexuslarge:36:36:-42|tNexus Crystal", id = 20725, price = 15360 },
+        { name = "|TInterface\\Icons\\inv_inscription_armorscroll01:36:36:-42|tArmor Vellum", id = 38682, price = 1220 },
+        { name = "|TInterface\\Icons\\inv_inscription_armorscroll02:36:36:-42|tArmor Vellum II", id = 37602, price = 2220 },
+        { name = "|TInterface\\Icons\\inv_inscription_weaponscroll01:36:36:-42|tWeapon Vellum", id = 39349, price = 1220 },
+        { name = "|TInterface\\Icons\\inv_inscription_weaponscroll02:36:36:-42|tWeapon Vellum II", id = 39350, price = 2220 },
     }},
     { name = "|TInterface\\Icons\\inv_rod_adamantite:40:40:-42|t|cff006400Rods|r", intid = 1400, items = {
         { name = "|TInterface\\Icons\\inv_staff_01:36:36:-42|tSilver Rod", id = 6338, price = 11124 }, 
