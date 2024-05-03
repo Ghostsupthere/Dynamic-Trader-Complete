@@ -2,13 +2,12 @@
 DynamicMarketTrader-WotLK
     This script was originally developed by Dinkledork, all credit goes to him.
     Please support Dinkledork's work by visiting his Patreon page: https://www.patreon.com/Dinklepack5
-
+    This script is maintained by Ghostsupthere
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-   - I (EscapeMyCoom) have edited this file to include WotLK items for crafting
-   - Not every tradeskill item is included as this is meant to provide a basis but still require other tradeskills to make certain items
-   - Some items may be missing as this is a WIP by me
-   - I have left two of the categories as placeholders incase you wish to add potions or enchanted vellums or anything else
+    Not every tradeskill item is included as this is meant to provide a basis but still require other tradeskills to make certain items
+    Some items may be missing as this is a WIP by me
+    I have left two of the categories as placeholders incase you wish to add potions or enchanted vellums or anything else
 	
 -----------------------------------------------------------------------------------------------------------------------------------------------
 	
@@ -101,7 +100,7 @@ local GLOBAL_FLUCTUATION = 0 -- Don't change
 -- Feel free to disable any item by commenting it out.
 
 local categories = {
-  { name = "|TInterface\\Icons\\inv_misc_herb_goldclover:40:40:-42|t|cff006400Herbs|r", intid = 100, items = { --P
+  { name = "|TInterface\\Icons\\inv_misc_herb_goldclover:40:40:-42|t|cff006400Herbs|r", intid = 100, items = { 
         { name = "|TInterface\\Icons\\inv_misc_herb_goldclover:36:36:-42|tGoldclover", id = 36901, price = 45000 },
         { name = "|TInterface\\Icons\\inv_misc_herb_constrictorgrass:36:36:-42|tDeadnettle", id = 37921, price = 45000 },
         { name = "|TInterface\\Icons\\inv_misc_herb_11a:36:36:-42|tFire Leaf", id = 39970, price = 45000 },
@@ -112,7 +111,7 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_misc_herb_icethorn:36:36:-42|tIcethorn", id = 36906, price = 45000 },
         { name = "|TInterface\\Icons\\inv_misc_herb_frostlotus:36:36:-42|tFrost Lotus", id = 36908, price = 75000 },
     }},
-	{ name = "|TInterface\\Icons\\inv_inscription_pigment_azure:40:40:-42|t|cff483D8BPigments|r", intid = 900, items = { --P
+	{ name = "|TInterface\\Icons\\inv_inscription_pigment_azure:40:40:-42|t|cff483D8BPigments|r", intid = 900, items = { 
         { name = "|TInterface\\Icons\\inv_inscription_pigment_azure:36:36:-42|tAzure Pigment", id = 39343, price = 150000 },
 		{ name = "|TInterface\\Icons\\inv_inscription_pigment_icy:36:36:-42|tIcy Pigment", id = 43109, price = 200000 },
     }},
@@ -120,7 +119,7 @@ local categories = {
 		{ name = "|TInterface\\Icons\\inv_inscription_inkpurple01:36:36:-42|tInk of the Sea", id = 43124, price = 300000 },
         { name = "|TInterface\\Icons\\inv_inscription_inkbluewhite01:36:36:-42|tSnowfall Ink", id = 57716, price = 400000 },
     }},
-    { name = "|TInterface\\Icons\\inv_fabric_soulcloth:40:40:-42|t|cffFFFFFFCloth|r", intid = 200, items = {  -- P
+    { name = "|TInterface\\Icons\\inv_fabric_soulcloth:40:40:-42|t|cffFFFFFFCloth|r", intid = 200, items = {
         { name = "|TInterface\\Icons\\inv_fabric_soulcloth:36:36:-42|tFrostweave Cloth", id = 33470, price = 8700 }, 
         { name = "|TInterface\\Icons\\inv_fabric_frostweave_bolt:36:36:-42|tBolt of Frostweave", id = 41510, price = 43500 }, 
         { name = "|TInterface\\Icons\\inv_fabric_frostweave_imbuedbolt:36:36:-42|tBolt of Imbued Frostweave", id = 41511, price = 48500 },
@@ -128,17 +127,17 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_fabric_moonshroud:36:36:-42|tMoonshroud", id = 56001, price = 150000 },
         { name = "|TInterface\\Icons\\inv_fabric_spellweave:36:36:-42|tSpellweave", id = 56003, price = 150000 },
     }},
-    { name = "|TInterface\\Icons\\inv_misc_leatherscrap_15:40:40:-42|t|cffFFFF00Skinning - Basic|r", intid = 300, items = { -- P
+    { name = "|TInterface\\Icons\\inv_misc_leatherscrap_15:40:40:-42|t|cffFFFF00Skinning - Basic|r", intid = 300, items = { 
         { name = "|TInterface\\Icons\\inv_misc_leatherscrap_15:36:36:-42|tBorean Leather", id = 33568, price = 90000 },
         { name = "|TInterface\\Icons\\inv_misc_leatherscrap_19:36:36:-42|tHeavy Borean Leather", id = 38425, price = 180000 },
     }},
-	{ name = "|TInterface\\Icons\\inv_misc_pelt_14:40:40:-42|t|cff333300Skinning - Advanced|r", intid = 400, items = { -- P
+	{ name = "|TInterface\\Icons\\inv_misc_pelt_14:40:40:-42|t|cff333300Skinning - Advanced|r", intid = 400, items = { 
 	    { name = "|TInterface\\Icons\\inv_misc_pelt_14:36:36:-42|tArctic Fur", id = 44128, price = 750000 },
         { name = "|TInterface\\Icons\\inv_misc_monsterscales_19:36:36:-42|tIcy Dragonscale", id = 38557, price = 80000 },
         { name = "|TInterface\\Icons\\inv_misc_monsterscales_18:36:36:-42|tJormungar Scale", id = 38561, price = 80000 },
         { name = "|TInterface\\Icons\\inv_misc_nerubianchitin_01:36:36:-42|tNerubian Chitin", id = 38558, price = 80000 },
 	}},
-    { name = "|TInterface\\Icons\\inv_misc_food_119_rhinoMeat:40:40:-42|t|cff8B0000Cooking Ingredients - Meat|r", intid = 500, items = { -- P
+    { name = "|TInterface\\Icons\\inv_misc_food_119_rhinoMeat:40:40:-42|t|cff8B0000Cooking Ingredients - Meat|r", intid = 500, items = {
         { name = "|TInterface\\Icons\\inv_misc_ammo_gunpowder_05:36:36:-42|tNorthern Spices", id = 43007, price = 500000 }, -- This is a daily reward, comment if you dont want it
         { name = "|TInterface\\Icons\\inv_misc_food_137_meat:36:36:-42|tWorm Meat", id = 43010, price = 50000 }, 
         { name = "|TInterface\\Icons\\inv_misc_food_135_meat:36:36:-42|tShoveltusk Flank", id = 43009, price = 50000 },
@@ -146,7 +145,7 @@ local categories = {
 		{ name = "|TInterface\\Icons\\inv_misc_food_72:36:36:-42|tWorg Haunch", id = 43011, price = 50000 },
         { name = "|TInterface\\Icons\\inv_misc_food_119_rhinomeat:36:36:-42|tRhino Meat", id = 43012, price = 50000 },
     }},
-    { name = "|TInterface\\Icons\\inv_misc_fish_51:40:40:-42|t|cff0000CDCooking Ingredients - Seafood|r", intid = 600, items = { -- P
+    { name = "|TInterface\\Icons\\inv_misc_fish_51:40:40:-42|t|cff0000CDCooking Ingredients - Seafood|r", intid = 600, items = {
         { name = "|TInterface\\Icons\\inv_misc_ammo_gunpowder_05:36:36:-42|tNorthern Spices", id = 43007, price = 50000 }, -- This is a daily reward, comment if you dont want it
         { name = "|TInterface\\Icons\\inv_misc_fish_54:36:36:-42|tDragonfin Angelfish", id = 41807, price = 50000 },
         { name = "|TInterface\\Icons\\inv_misc_fish_70:36:36:-42|tMoonglow Cuttlefish", id = 41801, price = 50000 },
@@ -158,7 +157,7 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_misc_fish_72:36:36:-42|tNettlefish", id = 41813, price = 50000 }, 
         { name = "|TInterface\\Icons\\inv_misc_fish_62:36:36:-42|tMusselback Sculpin", id = 41806, price = 50000 }, 
     }},
-    { name = "|TInterface\\Icons\\inv_misc_dust_infinite:40:40:-42|t|cff9400D3Enchanting|r", intid = 700, items = { -- P
+    { name = "|TInterface\\Icons\\inv_misc_dust_infinite:40:40:-42|t|cff9400D3Enchanting|r", intid = 700, items = {
         { name = "|TInterface\\Icons\\inv_misc_dust_infinite:36:36:-42|tInfinite Dust", id = 34054, price = 50000 },
         { name = "|TInterface\\Icons\\inv_enchant_essencecosmiclesser:36:36:-42|tLesser Cosmic Essence", id = 34056, price = 100000 },
         { name = "|TInterface\\Icons\\inv_enchant_essencecosmicgreater:36:36:-42|tGreater Cosmic Essence", id = 34055, price = 300000 },
@@ -166,21 +165,21 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_enchant_dreamshard_02:36:36:-42|tDream Shard", id = 34052, price = 450000 },
         { name = "|TInterface\\Icons\\inv_enchant_abysscrystal:36:36:-42|tAbyss Crystal", id = 34057, price = 5000000 },
     }},
-    { name = "|TInterface\\Icons\\inv_rod_platinum:40:40:-42|t|cff006400Rods|r", intid = 1400, items = { -- P
+    { name = "|TInterface\\Icons\\inv_rod_platinum:40:40:-42|t|cff006400Rods|r", intid = 1400, items = {
         { name = "|TInterface\\Icons\\inv_rod_platinum:36:36:-42|tTitanium Rod", id = 41745, price = 300000 }, 
     }},
-    { name = "|TInterface\\Icons\\inv_ore_cobalt:40:40:-42|t|cff004C99Ore|r", intid = 1000, items = {  -- P
+    { name = "|TInterface\\Icons\\inv_ore_cobalt:40:40:-42|t|cff004C99Ore|r", intid = 1000, items = {
         { name = "|TInterface\\Icons\\inv_ore_cobalt:36:36:-42|tCobalt Ore", id = 36909, price = 75000 },
         { name = "|TInterface\\Icons\\inv_ore_saronite_01:36:36:-42|tSaronite Ore", id = 36912, price = 100000 },
         { name = "|TInterface\\Icons\\inv_ore_platinum_01:36:36:-42|tTitanium Ore", id = 36910, price = 150000 },
     }},
-   { name = "|TInterface\\Icons\\inv_ingot_cobalt:40:40:-42|t|cff2F4F4FIngots|r", intid = 1100, items = { -- P
+   { name = "|TInterface\\Icons\\inv_ingot_cobalt:40:40:-42|t|cff2F4F4FIngots|r", intid = 1100, items = {
         { name = "|TInterface\\Icons\\inv_ingot_cobalt:36:36:-42|tCobalt Bar", id = 36916, price = 150000 }, 
         { name = "|TInterface\\Icons\\inv_ingot_yoggthorite:36:36:-42|tSaronite Bar", id = 36913, price = 200000 },
         { name = "|TInterface\\Icons\\inv_ingot_platinum:36:36:-42|tTitanium Bar", id = 41163, price = 300000 },
         { name = "|TInterface\\Icons\\inv_ingot_titansteel_blue:36:36:-42|tTitansteel Bar", id = 37663, price = 7500000 },
     }},
-    { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_04:40:40:-42|t|cff800080Gems|r", intid = 1200, items = { -- P
+    { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_04:40:40:-42|t|cff800080Gems|r", intid = 1200, items = {
         { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_12:36:36:-42|tBloodstone", id = 36917, price = 350000 },
         { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_10:36:36:-42|tChalcedony", id = 36923, price = 350000 },
         { name = "|TInterface\\Icons\\inv_jewelcrafting_gem_07:36:36:-42|tDark Jade", id = 36932, price = 350000 }, 
@@ -197,7 +196,7 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_jewelcrafting_icediamond_01:36:36:-42|tSkyflare Diamond", id = 41266, price = 500000 },
         { name = "|TInterface\\Icons\\inv_jewelcrafting_shadowspirit_01:36:36:-42|tEarthsiege Diamond", id = 41334, price = 500000 },
     }},
-	{ name = "|TInterface\\Icons\\inv_elemental_primal_shadow:40:40:-42|t|cff6600CCEssences & Elementals|r", intid = 1500, items = { -- P
+	{ name = "|TInterface\\Icons\\inv_elemental_primal_shadow:40:40:-42|t|cff6600CCEssences & Elementals|r", intid = 1500, items = {
         { name = "|TInterface\\Icons\\inv_elemental_crystal_fire:36:36:-42|tCrystallized Fire", id = 37702, price = 200000 },
         { name = "|TInterface\\Icons\\inv_elemental_crystal_water:36:36:-42|tCrystallized Water", id = 37705, price = 200000 },
         { name = "|TInterface\\Icons\\inv_elemental_crystal_life:36:36:-42|tCrystallized Life", id = 37704, price = 200000 },
@@ -206,7 +205,9 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_elemental_crystal_earth:36:36:-42|tCrystallized Earth", id = 37701, price = 200000 },
         { name = "|TInterface\\Icons\\spell_shadow_manaburn:36:36:-42|tEternal Might", id = 40248, price = 4000000 },
     }},
-    { name = "|TInterface\\Icons\\Ability_seal:40:40:-42|t|cff8B008BWIP|r", intid = 1300, items = { --Placeholders \ WIP
+        { name = "|TInterface\\Icons\\inv_inscription_weaponscroll03:40:40:-42|t|cff8B008BVellum|r", intid = 1300, items = {
+        { name = "|TInterface\\Icons\\inv_inscription_weaponscroll03:36:36:-42|tWeapon Vellum III", id = 43146, price = 450000 },
+        { name = "|TInterface\\Icons\\inv_inscription_armorscroll03:36:36:-42|tArmor Vellum III", id = 43145, price = 150000 },
     }}, 
     { name = "|TInterface\\Icons\\Ability_seal:40:40:-42|t|cff606060WIP|r", intid = 1600, items = {  --Placeholders \ WIP
     }},
