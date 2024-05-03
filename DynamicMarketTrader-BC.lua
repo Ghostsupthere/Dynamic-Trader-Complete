@@ -1,21 +1,20 @@
 --[[
-DynamicMarketTrader-BC
+DynamicMarketTrader
+
     This script was originally developed by Dinkledork, all credit goes to him.
     Please support Dinkledork's work by visiting his Patreon page: https://www.patreon.com/Dinklepack5
-
+    This script is maintained by Ghostsupthere
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-    I (EscapeMyCoom) have edited this file to include Burning Crusade items for crafting
     Not every tradeskill item is included as this is meant to provide a basis but still require other tradeskills to make certain items
     Some items may be missing as this is a WIP by me
     I have left two of the categories as placeholders incase you wish to add potions or enchanted vellums or anything else
 	
 -----------------------------------------------------------------------------------------------------------------------------------------------
 	
-	This script was created for smaller private servers as a means to allow players some semblance of an auctionhouse. In its current iteration, the ah module for Acore leaves a lot to be desired.
-	Prices are loosely based on authentic Burning Crusade prices as this is for Individual Progression servers or servers that mimic Burning Crusade via the 3.3.5 client.
+	This script was created for smaller private servers as a means to allow players some semblance of an auctionhouse. In its current interation, the ah module for Acore leaves a lot to be desired.
 	Please feel free to adjust any values you see fit.
-	
+
 	Features include:
 	The script uses a dynamic pricing system for items, with prices changing based on several factors, including the day of the week, the time of day, and a global fluctuation value. This means that prices will vary from month to month, day to day, hour to hour.
 	1. Inflation: The script includes an inflation system that increases prices over time, based on a defined monthly inflation rate. The inflation system can be enabled or disabled as needed.
@@ -95,13 +94,13 @@ local SELL_QUANTITY = 7
 
 local GLOBAL_FLUCTUATION = 0 -- Don't change
 
+
 -- Pricing will need adjusted based on your servers needs if you are forking this
--- Please note that certain items are not included, some may be oversight as this is a WIP, but certain items such as epic gems are not included on purpose
+-- Please note that certain items are not included: Some may be oversight as this is a WIP, but certain items such as epic gems are not included on purpose
 -- If you wish to add them, just copy a line and use WoWhead for the iconID, itemID and then price accordingly to your needs
--- Feel free to disable any item by commenting it out.
 
 local categories = {
-  { name = "|TInterface\\Icons\\inv_misc_herb_felweed:40:40:-42|t|cff006400Herbs|r", intid = 100, items = { 
+  { name = "|TInterface\\Icons\\inv_misc_herb_felweed:40:40:-42|t|cff006400Herbs|r", intid = 100, items = {
         { name = "|TInterface\\Icons\\inv_misc_herb_felweed:36:36:-42|tFelweed", id = 22785, price = 100000 },
         { name = "|TInterface\\Icons\\inv_misc_herb_dreamingglory:36:36:-42|tDreaming Glory", id = 22786, price = 200000 },
         { name = "|TInterface\\Icons\\inv_misc_herb_ragveil:36:36:-42|tRagveil", id = 22787, price = 250000 },
@@ -112,16 +111,16 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_misc_herb_manathistle:36:36:-42|tMana Thistle", id = 22793, price = 350000 },
     }},
 	{ name = "|TInterface\\Icons\\inv_inscription_pigment_nether:40:40:-42|t|cff483D8BPigments|r", intid = 900, items = {
-        { name = "|TInterface\\Icons\\inv_inscription_pigment_nether:36:36:-42|tNether Pigment", id = 39342, price = 90000 }, 
+        { name = "|TInterface\\Icons\\inv_inscription_pigment_nether:36:36:-42|tNether Pigment", id = 39342, price = 90000 },
 		{ name = "|TInterface\\Icons\\inv_inscription_pigment_ebon:36:36:-42|tEbon Pigment", id = 43108, price = 150000 },
     }},
-	{ name = "|TInterface\\Icons\\inv_inscription_inkblack02:40:40:-42|t|cff00008BInk|r", intid = 800, items = { 
+	{ name = "|TInterface\\Icons\\inv_inscription_inkblack02:40:40:-42|t|cff00008BInk|r", intid = 800, items = {
 		{ name = "|TInterface\\Icons\\inv_inscription_inkblack02:36:36:-42|tEthereal Ink", id = 43124, price = 180000 },
         { name = "|TInterface\\Icons\\inv_inscription_inkblack04:36:36:-42|tDarkflame Ink", id = 57714, price = 150000 },
     }},
-    { name = "|TInterface\\Icons\\inv_fabric_netherweave:40:40:-42|t|cffFFFFFFCloth|r", intid = 200, items = {  
+    { name = "|TInterface\\Icons\\inv_fabric_netherweave:40:40:-42|t|cffFFFFFFCloth|r", intid = 200, items = {
         { name = "|TInterface\\Icons\\inv_fabric_netherweave:36:36:-42|tNetherweave Cloth", id = 21877, price = 23000 }, 
-        { name = "|TInterface\\Icons\\inv_fabric_netherweave_bolt:36:36:-42|tBolt of Netherweave Cloth", id = 26745, price = 115000 }, 
+        { name = "|TInterface\\Icons\\inv_fabric_netherweave_bolt:36:36:-42|tBolt of Netherweave Cloth", id = 21840, price = 115000 }, 
         { name = "|TInterface\\Icons\\inv_fabric_netherweave_bolt_imbued:36:36:-42|tBolt of Imbued Netherweave", id = 21842, price = 370000 },
         { name = "|TInterface\\Icons\\inv_fabric_soulcloth_bolt:36:36:-42|tBolt of Soulcloth", id = 21844, price = 500000 },
         { name = "|TInterface\\Icons\\inv_fabric_moonrag_primal:36:36:-42|tPrimal Mooncloth", id = 21845, price = 1370000 },
@@ -148,9 +147,9 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_misc_food_71:36:36:-42|tTalbuk Venison", id = 27682, price = 35000 },
         { name = "|TInterface\\Icons\\inv_misc_food_16:36:36:-42|tRaptor Ribs", id = 31670, price = 35000 },
         { name = "|TInterface\\Icons\\inv_misc_food_98_talbuk:36:36:-42|tSerpent Flesh", id = 31671, price = 50000 },
-        { name = "|TInterface\\Icons\\inv_misc_food_81:36:36:-42|tChunk o' Basilisk", id = 31671, price = 50000 },
+        { name = "|TInterface\\Icons\\inv_misc_food_81:36:36:-42|tChunk o' Basilisk", id = 27677, price = 50000 },
     }},
-    { name = "|TInterface\\Icons\\inv_misc_fish_36:40:40:-42|t|cff0000CDCooking Ingredients - Seafood|r", intid = 600, items = {
+    { name = "|TInterface\\Icons\\inv_misc_fish_51:40:40:-42|t|cff0000CDCooking Ingredients - Seafood|r", intid = 600, items = {
         { name = "|TInterface\\Icons\\inv_misc_fish_37:36:36:-42|tBarbed Gill Trout", id = 27422, price = 90000 },
         { name = "|TInterface\\Icons\\inv_misc_fish_39:36:36:-42|tSpotted Feltail", id = 27425, price = 90000 },
         { name = "|TInterface\\Icons\\inv_misc_fish_36:36:36:-42|tGolden Darter", id = 27438, price = 90000 },		
@@ -166,9 +165,9 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_enchant_dustarcane:36:36:-42|tArcane Dust", id = 22445, price = 25000 },
         { name = "|TInterface\\Icons\\inv_enchant_essencearcanesmall:36:36:-42|tLesser Planar Essence", id = 22447, price = 150000 },
         { name = "|TInterface\\Icons\\inv_enchant_essencearcanelarge:36:36:-42|tGreater Planar Essence", id = 22446, price = 450000 },
-        { name = "|TInterface\\Icons\\inv_enchant_shardprismaticsmall:36:36:-42|tSmall Prismatic Shard", id = 22448, price = 500000 },
-        { name = "|TInterface\\Icons\\inv_enchant_shardprismaticlarge:36:36:-42|tLarge Prismatic Shard", id = 22449, price = 1500000 },
-        { name = "|TInterface\\Icons\\inv_enchant_voidcrystal:36:36:-42|tVoid Crystal", id = 22450, price = 2500000 },
+        { name = "|TInterface\\Icons\\inv_enchant_shardprismaticsmall:36:36:-42|tSmall Prismatic Shard", id = 22448, price = 150000 },
+        { name = "|TInterface\\Icons\\inv_enchant_shardprismaticlarge:36:36:-42|tLarge Prismatic Shard", id = 22449, price = 450000 },
+        { name = "|TInterface\\Icons\\inv_enchant_voidcrystal:36:36:-42|tVoid Crystal", id = 22450, price = 990000 },
     }},
     { name = "|TInterface\\Icons\\inv_rod_adamantite:40:40:-42|t|cff006400Rods|r", intid = 1400, items = {
         { name = "|TInterface\\Icons\\inv_rod_felsteel:36:36:-42|tFel Iron Rod", id = 25843, price = 600000 }, 
@@ -212,11 +211,11 @@ local categories = {
         { name = "|TInterface\\Icons\\inv_elemental_mote_life01:36:36:-42|tMote of Life", id = 22575, price = 100000 },
         { name = "|TInterface\\Icons\\inv_elemental_mote_mana:36:36:-42|tMote of Mana", id = 22576, price = 100000 },
         { name = "|TInterface\\Icons\\inv_elemental_mote_air01:36:36:-42|tMote of Air", id = 22572, price = 100000 },
-        { name = "|TInterface\\Icons\\spell_nature_lightningoverload:36:36:-42|tPrimal Might", id = 22572, price = 5000000 },
+        { name = "|TInterface\\Icons\\spell_nature_lightningoverload:36:36:-42|tPrimal Might", id = 23571, price = 500000 },
     }},
-    { name = "|TInterface\\Icons\\Ability_seal:40:40:-42|t|cff8B008BWIP|r", intid = 1300, items = { --Placeholders \ WIP
+    { name = "|TInterface\\Icons\\Ability_seal:40:40:-42|t|cff8B008BWIP|r", intid = 1300, items = { -- Placeholder \ WIP
     }}, 
-    { name = "|TInterface\\Icons\\Ability_seal:40:40:-42|t|cff606060WIP|r", intid = 1600, items = {  --Placeholders \ WIP
+    { name = "|TInterface\\Icons\\Ability_seal:40:40:-42|t|cff606060WIP|r", intid = 1600, items = { -- Placeholder \ WIP
     }},
 }
 
